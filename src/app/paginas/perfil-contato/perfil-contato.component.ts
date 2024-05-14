@@ -1,3 +1,4 @@
+import { SeparadorComponent } from './../../componentes/separador/separador.component';
 import { ContatoService } from './../../services/contato.service';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,12 +11,13 @@ import { ActivatedRoute, RouterLink, Router } from '@angular/router';
   standalone: true,
   templateUrl: './perfil-contato.component.html',
   styleUrl: './perfil-contato.component.css',
-  imports: [CommonModule, ContainerComponent, RouterLink],
+  imports: [CommonModule, ContainerComponent, RouterLink, SeparadorComponent],
 })
 export class PerfilContatoComponent implements OnInit {
   contato: Contato = {
     id: 0,
     nome: '',
+    avatar: '',
     telefone: '',
     email: '',
     aniversario: '',
