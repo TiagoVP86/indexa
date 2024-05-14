@@ -5,13 +5,20 @@ import { CommonModule } from '@angular/common';
 import { ContainerComponent } from '../../componentes/container/container.component';
 import { Contato } from '../../componentes/contato/contato';
 import { ActivatedRoute, RouterLink, Router } from '@angular/router';
+import { CabecalhoComponent } from '../../componentes/cabecalho/cabecalho.component';
 
 @Component({
   selector: 'app-perfil-contato',
   standalone: true,
   templateUrl: './perfil-contato.component.html',
   styleUrl: './perfil-contato.component.css',
-  imports: [CommonModule, ContainerComponent, RouterLink, SeparadorComponent],
+  imports: [
+    CommonModule,
+    ContainerComponent,
+    RouterLink,
+    SeparadorComponent,
+    CabecalhoComponent,
+  ],
 })
 export class PerfilContatoComponent implements OnInit {
   contato: Contato = {
